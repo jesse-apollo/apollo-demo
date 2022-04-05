@@ -1,10 +1,10 @@
 install-deps:
 	cd client && pip3 install -r requirements.txt || echo "!!! Unable to install Python libaries. !!!"
-	cd client && cp dot_env .env && cp cloudbuild.yaml.tmpl cloudbuild.yaml || true
-	cd gateway && npm install && cp dot_env .env && cp cloudbuild.yaml.tmpl cloudbuild.yaml || true
-	cd subgraph1 && npm install && cp dot_env .env && cp cloudbuild.yaml.tmpl cloudbuild.yaml || true
-	cd subgraph2 && npm install && cp dot_env .env && cp cloudbuild.yaml.tmpl cloudbuild.yaml || true
-	cd subgraph3 && npm install && cp dot_env .env && cp cloudbuild.yaml.tmpl cloudbuild.yaml || true
+	cd client && cp dot_env .env || true
+	cd gateway && npm install && cp dot_env .env || true
+	cd subgraph1 && npm install && cp dot_env .env || true
+	cd subgraph2 && npm install && cp dot_env .env || true
+	cd subgraph3 && npm install && cp dot_env .env || true
 	echo -n "\nRun 'make setup' to restore your .env or cloudbuild.yaml files if they were overwritten."
 
 setup:

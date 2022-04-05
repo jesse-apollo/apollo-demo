@@ -53,7 +53,7 @@ def replace_google_yaml(filename):
     project = DATA_DICT.get("GOOGLE_PROJECT")
     if project is None:
         return
-    file_contents = open(filename).read()
+    file_contents = open("%s.tmpl" % filename).read()
     file_contents = GOOGLE_RE.sub(project, file_contents)
     open(filename, 'w').write(file_contents)
 
