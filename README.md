@@ -6,7 +6,7 @@ Use the included setup tool (`make setup`) whenever possible as it saves
 your information and can be re-run multiple times to update `.env` files
 and `cloudbuild.yaml` files. 
 
-## Git Checkout Basiscs
+## Git Checkout Basics
 
 If you want to save changes that you make to your demo, it's a good idea
 to use git branches.
