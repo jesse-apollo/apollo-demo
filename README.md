@@ -54,10 +54,11 @@ to use git branches.
     1. Go to https://console.cloud.google.com/
     2. Find the __"Sales Engineering"__ folder by searching in the drop down and then click "New Project" the "Location" needs to be "Sales Engineering"
     3. Name your new project `<your-last-name>-demo`
-    4. In your new project click on the menu and select "Cloud Run" from the list.
-    5. Click "Enable Cloud Run API"
-    6. In your new project click on the menu and select "Cloud Build" from the list.
-    7. Under the "Settings" area enable the "Cloud Run Admin" Role.
+    4. Choose `doit.apollographql.com` under "other billing accounts" as the `Billing account`
+    5. In your new project click on the menu and select "Cloud Run" from the list.
+    6. Click "Enable Cloud Run API"
+    7. In your new project click on the menu and select "Cloud Build" from the list.
+    8. Under the "Settings" area enable the "Cloud Run Admin" Role.
  3. Authenticate with Google Cloud from a terminal on your Mac using your Apollo email: `gcloud init` (if you ever need to change your default Project ID (this might be different from the project name so always use the ID) use the command `gcloud config set project <project-ID>`)
  4. In the folder ./gateway, ./subgraph1, ./subgraph2, and ./subgraph3 folders edit the `cloudbuild.yaml` file to use your correct project ID (replace the <CHANGE_ME> in each of those) __OR__ use the setup tool by typing `make setup` (recommended)
 

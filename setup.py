@@ -65,7 +65,7 @@ if __name__ == "__main__":
     print("---------------------------")
     print("Press Control-C to exit.\n")
 
-    if not exists("gateway/.env") or not exists("gateway/cloudbuild.yaml"):
+    if not exists("gateway/.env") or not exists("gateway/cloudbuild.yaml.tmpl"):
         print("ERROR: dependencies are missing, run 'make install-deps'.")
         sys.exit(1)
 
