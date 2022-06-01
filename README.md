@@ -58,13 +58,13 @@ to use git branches.
     5. In your new project click on the menu and select "Cloud Run" from the list.
     6. Click "Enable Cloud Run API"
     7. In your new project click on the menu and select "Cloud Build" from the list.
-    8. Under the "Settings" area enable the "Cloud Run Admin" Role.
+      1. Under the "Settings" area enable the "Cloud Run Admin" Role (it may ask you if you want to add the role to the service account, say "yes").
  3. Authenticate with Google Cloud from a terminal on your Mac using your Apollo email: `gcloud init` (if you ever need to change your default Project ID (this might be different from the project name so always use the ID) use the command `gcloud config set project <project-ID>`)
  4. In the folder ./gateway, ./subgraph1, ./subgraph2, and ./subgraph3 folders edit the `cloudbuild.yaml` file to use your correct project ID (replace the <CHANGE_ME> in each of those) __OR__ use the setup tool by typing `make setup` (recommended)
 
 ### How to deploy
 
- 1. Deploy your gateway and subgraphs with `make deploy`
+ 1. Deploy your gateway and subgraphs with `make deploy`(say "(Y)es" if it asks you to activate any GCP services)
  2. Check the Google Cloud Run Console to see the URLs for each of your services and your gateway.
  3. Update the `.env` files in ./subgraph1, ./subgraph2, ./subgraph3 to have the right `ROUTING_URL` that you got from Cloud Run dashboard __OR__ use the setup tool by typing `make setup`
  4. Run `make publish` (this will run `make publish` in each of your subgraph directories, you can also run those one by one)
