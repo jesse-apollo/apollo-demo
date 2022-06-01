@@ -1,7 +1,7 @@
 include .env
 
 deploy:
-	echo "Running Google Cloud Build"
+	@echo "Running Google Cloud Build"
 	@gcloud builds submit --substitutions=_APOLLO_KEY=${APOLLO_KEY},_APOLLO_GRAPH_REF=${APOLLO_GRAPH_REF}
 
 build-docker:
